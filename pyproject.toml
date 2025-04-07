@@ -6,12 +6,21 @@ authors = ["NeZlox <cnegovek@mail.ru>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
-advanced-alchemy = "^0"
-litestar = "^2"
-msgspec = "^0.19"
-ruff = "^0.11"
 
+# Core Python version requirement
+python = "^3.12"
+
+# Database/ORM dependencies
+advanced-alchemy = "^0"
+
+# Web framework dependencies
+litestar = "^2"
+
+# Serialization/validation
+msgspec = "^0.19"
+
+# Development tools
+ruff = "^0.11"
 
 [build-system]
 requires = ["poetry-core"]
