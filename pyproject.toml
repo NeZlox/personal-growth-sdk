@@ -7,6 +7,10 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+advanced-alchemy = "^0"
+litestar = "^2"
+msgspec = "^0.19"
+ruff = "^0.11"
 
 
 [build-system]
