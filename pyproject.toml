@@ -15,6 +15,7 @@ advanced-alchemy = "^0"
 
 # Web framework dependencies
 litestar = "^2"
+multidict = "6.2.0"
 
 # Serialization/validation
 msgspec = "^0.19"
