@@ -6,8 +6,8 @@ from typing import Annotated
 from litestar.params import Parameter
 from msgspec import Struct
 
-from .session_response_schema import SessionResponseTemplate
-from .user_response_schema import UserResponseTemplate
+from .session_template_schema import SessionResponseTemplate
+from .user_template_schema import UserResponseTemplate
 
 __all__ = ['SessionCreateRequest', 'SessionResponse', 'SessionUpdateRequest']
 
@@ -85,7 +85,7 @@ class SessionResponse(SessionResponseTemplate):
     """
 
     user: Annotated[
-        UserResponseTemplate,
+        UserResponseTemplate | None,
         Parameter(
             description=(
                 'User associated with the refresh session. '

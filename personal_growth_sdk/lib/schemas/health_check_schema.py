@@ -3,6 +3,13 @@ from typing import Any
 
 import msgspec
 
+__all__ = [
+    'DependencyHealth',
+    'DependencyType',
+    'HealthSchema',
+    'HealthStatus'
+]
+
 
 class HealthStatus(enum.StrEnum):
     """

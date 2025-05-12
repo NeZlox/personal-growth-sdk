@@ -3,10 +3,10 @@ from typing import Annotated
 from litestar.params import Parameter
 from msgspec import Struct
 
-from personal_growth_sdk.authorization.models.enums.role import RoleType
+from personal_growth_sdk.authorization.models.enums import RoleType
 
-from .session_response_schema import SessionResponseTemplate
-from .user_response_schema import UserResponseTemplate
+from .session_template_schema import SessionResponseTemplate
+from .user_template_schema import UserResponseTemplate
 
 __all__ = ['UserCreateRequest', 'UserLoginRequest', 'UserResponse', 'UserUpdateRequest']
 
@@ -58,7 +58,7 @@ class UserResponse(UserResponseTemplate):
     """
 
     active_sessions: Annotated[
-        list[SessionResponseTemplate],
+        list[SessionResponseTemplate] | None,
         Parameter(
             description=(
                 'List of active refresh sessions associated with the user. '
